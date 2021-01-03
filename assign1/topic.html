@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="description" content="An Introduction of Firewall Technology" />
+	<meta name="keywords" content="Introduction, firewall" />
+	<meta name="author" content="Cuong Nguyen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>An Introduction of Firewall Technology</title>
+	<link rel ="stylesheet" href="styles/style.css" />
+</head>
+
+
+
+<body>
+<nav>
+<a href= "index.html"> Index</a>
+<a href= "topic.html">Introduction</a>
+<a href= "quiz.html"> Quiz</a>
+<a href= "enhancements.html"> Enhancements </a>
+</nav>
+
+<header>
+<h1> FIREWALL TECHNOLOGY</h1>
+</header>
+<hr />
+
+
+
+<div class="contents">
+<p> <strong>Contents</strong></p>
+<ol>
+ <li><a href="#define"> Definition</a></li>
+ <li><a href="#history">History of firewall</a></li>
+ <li><a href="#type">Types of firewall</a>
+ <ul>
+  <li><a href="#network">Network layer firewall</a></li>
+  <li><a href="#application"> Application layer firewall</a></li>
+  <li><a href="#next">Next-Generation Firewall</a></li>
+ </ul>
+ </li>
+</ol>
+</div>
+
+
+
+<section id="define">
+<h2>Definition</h2>
+<p> Firewall is a network security system that monitors and controls network traffic to devices, based on predertemined security rules.It typically establishes a barrier 
+between trusted internal network and untrusted external ones, such as the Internet to protect the network against malicious attacks, including viruses and hackers.</p>
+</section>
+
+<section id="history">
+<h2> History of firewall</h2>
+<p> The demand of users about a safe and secure network was not new, and so was the firewall. Its concept was invented in the late 1980s, when the Internet was still limited in terms of global use and connectivity.
+Before that, routers were used to halting the spread of problems between networks. </p>
+<p> The history of this technology can be separated into five periods, each attached with a different type of firewall:</p>
+<ul>
+    <li>The first type of firewall, called Packet-Filter Firewall, were invented by Digital Equipment Organisation in 1988. During this era it only inspected packet of information 
+    transferred between hosts and the network without considering the state of the network; thus it was called the stateless firewall.It operated in the Network layer of the OSI model,
+    so it was also called the Network firewall.</li>
+   <li>A year later, AT&T developed the second generation of firewall called the Circuit Level Technology, which could be considered as the first stateful firewall. It keep information about 
+   the active sessions and connection states, records all informations passing through it. A notable feature of this type of firewall is that it works on the Transport layer, apart from 
+   the Network layer.</li>
+    <li>In 1991, the third generation of firewall was established when Secure External Access Link was released by Digital Equipment Organisation. That is an Application layer firewall, 
+    which means that it operated in the top layer of the OSI model. It involved the management of traffic on the Web browsers and application protocols like Telnet or HTTP.</li>
+    <li>In 2004, International Data Corporation(IDC) introduced United Threat Management(UTM), which provided real-time network protection. It used a wide array of technologies like VPN,
+    Network Firewall, Web Filtering,... to protect network from outside threats.This concept are becoming increasingly popular, partly because it could involve more layer on OSI to 
+    prevent outsiders' attacks, therefore have higher efficency.</li>
+    <li>Five years later, a new firm called Gardner presented its Next-Generation Firewall. It uses a variety of cutting-edge techniques such as Intrusion Policy, Network Profiling,
+    Deep Packet Inspection,etc. It could have extensive control of applications which it could identify through analysis and signature matching.</li>
+</ul>
+</section>
+
+<section id="types">
+<h2>Types of firewall</h2>
+<p>There are multiple ways to classify firewalls, but in general, for traditional firewalls they are categorized as network-based or application-based firewalls, depending on which layer 
+the firewall is working on.</p>
+<figure>
+<img src="images/Firewall.png" alt="Position of the firewall on network" width="300" height="200">
+<figcaption>
+This figure shows us the location of the firewall in a typical network
+</figcaption>
+</figure>
+<h3 id="network"> Network layer firewall</h3>
+<p>Network layer firewall, also known as packet filters, operates in lower layer of TCP/IP stack. It generally filters IP packets from outside based on an array of established rulesets,
+which could be determined by default or by a firewall administrator.<p>
+<p> This type of firewall has two categories: stateful or stateless. While stateful firewall only let packets from legitimate,known and active sources into the network,
+stateless one do not take context into account when filtering packets.</p>
+
+
+<h3 id="application">Application-layer firewall</h3>
+<p>This type of firewall works on top layer of OSI model and involves protocols like HTTP, FTP and Telnet. It could intercepts all packets travelling to or form an application.
+It could filter connections by processing ID of packets against a predetermined ruleset and saving information into a socket. Due to that feature, it is called "socket filters".
+According to Wikipedia:</p>
+<blockquote cite="https://en.wikipedia.org/wiki/Firewall_(computing)">
+The extent of the filtering that occurs is defined by the provided ruleset. Given the variety of software that exists, application firewalls only have more complex rule sets for the standard services, such as sharing services.
+Application firewalls work much like a packet filter but application filters apply filtering rules (allow/block) on a per-process basis instead of filtering connections on a per-port basis.
+</blockquote>
+<p> There are two main types of application-layer firewall, network-based and host-based. Here is a table comparing these two types:</p>
+<table id="differences">
+<caption><span class="tabletitle">Differences between network-based and host-based application-layer firewalls</span></caption>
+<thead>
+<tr>
+<th>Type of application-layer firewall</th>
+<th>Network-based </th> 
+<th>Host-based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Main characteristics</th>
+<td>
+  <ul>
+  <li>Implemented through software running on a host or stand-alone part of network hardware</li>
+  <li>Could be a host using various forms of proxy servers to proxy traffic before it comes to the server</li>
+  </ul>
+ </td>
+<td>
+<ul>
+  <li>Examining information passing through system calls(maybe including a network stack)</li>
+  <li>Can only provide protection for applications running on the same host</li>
+  <li>May also provide network-based application filtering.</li>
+</ul>
+ </td>
+</tr>
+<tr> 
+<th scope="row">Advantages</th>
+<td>
+ <ul>
+  <li>Better inspecting the contents of traffic and blocking specific contents(like websites or viruses)</li>
+  <li>Could consolidate authentication, and offload encryption from outside servers.</li>
+</ul>
+ </td>
+<td>
+<ul>
+  <li>More versatile and dynamic roles(provide protection for hosts and for some cases, networks)</li>
+ </ul>
+ </td>
+</tr>
+
+</table>
+<p>While there are many advantages for application-layer firewall as seen above, this type of firewall also has various limitations.It uses per-process 
+rules, which have limited efficacy in filtering every possible association with other processes.It also could not protect hosts against outside modifications.
+That's why nowadays, it is gradually replaced in many networks by Next-Generation Firewall.</p>
+
+<h3 id ="next">Next-Generation Firewall</h3>
+<aside>
+<p> For NGFW, before installing the system on the network or host, please make sure it has:</p>
+<ol>
+ <li> Breach prevention and advanced security;</li>
+ <li> Comprehensive network visibility;</li>
+ <li>Flexible management and deployment options;</li>
+ <li>Fastest time to detection(seconds for threats, a successful breach within hours or minutes)</li>
+ <li>Automation and product integrations.</li>
+</ol>
+<p> Doing all of that, and your new type of firewall could be ready to protect your computer and your network!</p>
+</aside>
+<p> A next generation firewall is, as Gardner - its inventor - defined: 
+<q>a deep-packet inspection firewall that moves beyond port/protocol inspection and blocking to add 
+application-level inspection, intrusion prevention, and bringing intelligence from outside the firewall.</q> <!-- Reference for this quote type:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q -->
+Despite developed relatively late (in 2009), due to its efficiency, it is becoming increasingly more popular.</p>
+<p> Like regular firewall, Next-Generation Firewall(NGFW) uses both static and dynamic packet filtering and VPN support.It could also be able to translate
+network and port addresses for mapping IPs. However, NGFW has an unique ability to filter packets based on applications. Having extensive control and visibility of 
+applications, with the ability of identify unwanted applications through whitelists or signature-based IPS, NGFW is a truly useful tool for ensuring network
+and host security.</p>
+
+</section>
+
+
+<h2 id="learningresources">More articles about firewall</h2> 
+<p> To learn more about firewall, here is some pages that could help you enhancing your understanding about this technology. Please click on the image below:</p>
+<!-- This is my image map for learning resources -->
+<img src="images/Learningwebsite.jpg" alt="Learning websites" usemap="#learningmap">
+<map name="learningmap">
+   <area shape="rect" coords="0,0,436,100"  alt="Howstuffworks" href="https://computer.howstuffworks.com/firewall1.htm">
+   <area shape="rect" coords= "437,0,636,100" alt="techopedia" href="https://www.techopedia.com/definition/5355/firewall">
+   <area shape="rect" coords="638,0,813,100" alt="Cisco" href="https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-firewall.html">
+   <area shape="rect" coords= "814,0,920,100" alt="Wikipedia" href="https://en.wikipedia.org/wiki/Firewall_(computing)">
+</map>
+
+<h2> References:</h2>
+<ul>
+ <li>Firewall(computing), Wikipedia:<a href="https://en.wikipedia.org/wiki/Firewall_(computing)"> https://en.wikipedia.org/wiki/Firewall_(computing)</a></li>
+ <li>Application firewall, Wikipedia:<a href="https://en.wikipedia.org/wiki/Application_firewall">https://en.wikipedia.org/wiki/Application_firewall</a></li>
+ <li>Who Invented the Firewall? History, Types, and Generations of Firewall; The PC Insider:<a href="https://www.thepcinsider.com/who-invented-firewall-history-evolution-types-generations/">
+ https://www.thepcinsider.com/who-invented-firewall-history-evolution-types-generations/</a></li>
+ <li> WHAT IS A NEXT GENERATION FIREWALL? LEARN ABOUT THE DIFFERENCES BETWEEN NGFW AND TRADITIONAL FIREWALLS, DigitalGuardian: <a href="https://digitalguardian.com/blog/what-next-generation-firewall-learn-about-differences-between-ngfw-and-traditional-firewalls">
+ https://digitalguardian.com/blog/what-next-generation-firewall-learn-about-differences-between-ngfw-and-traditional-firewalls</a></li>
+ <li> What Is a Next-Generation Firewall?, Cisco: <a href="https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-next-generation-firewall.html">
+ https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-next-generation-firewall.html</a></li>
+</ul>
+
+
+ <footer>
+ <p> COS10011 CWA</p>
+   <p> Mark up by: <a href="https://outlook.office365.com/mail/inbox">Cuong Nguyen.</a>All right reserved.</p>
+   <p>Assignment 1</p>
+ </footer>
+</body>
+</html>

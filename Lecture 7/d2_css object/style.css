@@ -1,0 +1,10 @@
+	.orange {
+		color: orange;
+		}
+	#demo {
+		width: 300px;
+		height:200px;
+		background-color: yellow;
+		border: solid 5px green;
+		font-size: 24px;
+	}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="description" content="Result about Firewall Technology questiona" />
+	<meta name="keywords" content="Quiz, firewall" />
+	<meta name="author" content="Cuong Nguyen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your score after questions of Firewall Technology</title>
+	<link rel ="stylesheet" href="styles/style.css" />
+	<script src="scripts/quiz.js"></script>
+</head>
+
+
+<body id="resultWebsite">
+
+
+<?php
+include_once("header.inc");
+?>
+<hr />
+
+<h2 id="result">Result</h2>
+<hr />
+
+<p>Congratulations! Now you have done all questions about Firewall Technology, here is the result for you:</p>
+<p>Name: <span id="fullname"> </span></p>
+<p>Student ID: <span id="newid"></span></p>  
+<p>Your score: <span id="score"></span></p>
+<p>Number of attempts: <span id="numberOfAttempts"></span></p>
+
+<p>If you would like to redo questions, please <a href="quiz.html"> click here </a> to return to the quiz page.<p>
+<p><em>Please remember that each student only has three attempts for the quiz!</em></p>
+<input type="hidden" name="given" id="given" />  
+<input type="hidden" name="family" id="family" />    
+<input type="hidden" name="studentid" id="studentid" />   
+<input type="hidden" name="studentscore" />  
+<input type="hidden" name="studentnumberOfAttempts"  />
+<?php
+include_once("footer.inc");
+?>
+</body>
+</html>

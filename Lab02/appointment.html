@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" \>
+  <meta name="description" content="CWA Help Desk Appointment" />
+  <meta name="keywords" content="Help Desk, Appointment" />
+  <meta name="author" content="Cuong Nguyen" />
+<title>CWA Help Desk Appointment</title>
+</head>
+
+<body>
+<p><a href= "http://www.swinburne.edu.au/"><img src = "logo.png" height= "180" width= "300" /></a></p>
+
+<h1>CWA Help Desk Appointment</h1>
+<p>The Help Desk is located in ATC620.Open 10:30 to 19:30 Monday to Friday.</p>
+<p>Check Blackboard for when CWA tutors will be there.</p>
+
+
+<form id="details" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+<fieldset>
+<legend><em>Student details</em></legend>
+<p><label for="studentid"> Student ID</label>
+<input type="text" name="studentid" id="studentid" required="required" pattern="[0-9]{7,10}" /></p>
+<p><label for="given"> Given Name</label>
+<input type="text" name="given" id="given" maxlength="15" size="10" required="required" pattern="^[A-Za-z]+$" />
+<label for="family"> Family Name</label>
+<input type="text" name="family" id="family" maxlength="15" size="10" required="required" pattern="^[A-Za-z]+$"/></p>
+</fieldset>
+
+<fieldset>
+<legend><em>Your unit</em></legend><br />
+<label><input type ="radio" name="unit" value="COS10011" checked="checked" required="required"  />COS10011</label>
+<label><input type ="radio" name="unit" value="COS60004" />COS60004</label>
+<label><input type ="radio" name="unit" value="COS60007" />COS60007</label>
+<p><label for="rank">Your Tutor</label>
+<select name="rank" id ="rank" required="required">
+<option value="" selected="selected">Please Select</option>
+<option value="Wei Lai" >Wei Lai</option>
+<option value="Grace Tao">Grace Tao</option>
+<option value="Shibli Saleheen">Shibli Saleheen</option>
+<option value="Gamunu Dassanayake">Gamunu Dassanayake</option>
+</select>
+</p>
+</fieldset>
+
+<fieldset>
+<legend><em>Issue</em></legend>
+<p><label><input type="checkbox" name="issue[]" value="html" checked="checked" />HTML</label>
+<label><input type="checkbox" name="issue[]" value="css" />CSS</label>
+<label><input type="checkbox" name="issue[]" value="php" />PHP</label>
+<label><input type="checkbox" name="issue[]" value="javasc" />JavaScript</label>
+<label><input type="checkbox" name="issue[]" value="sql" />MySQL</label>
+</p>
+<p><label>Description of Issue<br />
+<textarea name="issuedes" rows="5" cols="50" /> Write description of the problem here...
+</textarea></label></p>
+</fieldset>
+
+<fieldset>
+<legend><em>Preferred Date/Time</em></legend><br />
+<p><label>Date<input type="text" name="pdate" placeholder="dd/mm/yyyy" pattern="(3[01]|[12]\d|\<0?\d\>)/(1[0-2]|\<0?\d\>)/(202\d)"/> </label></p>
+<p><label>Time<input type="text" name="ptime" placeholder="00:00" pattern="([01]\d|2[0-3]):([0-5]\d)"/> </label></p>
+</fieldset>
+<p>
+<input type="submit" value="Book" />
+<input type="reset" value="Reset form" />
+</p>
+</form>
+
+</body>
+</html>

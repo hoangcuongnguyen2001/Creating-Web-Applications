@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="description" content="Quiz about Firewall Technology" />
+	<meta name="keywords" content="Quiz, firewall" />
+	<meta name="author" content="Cuong Nguyen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz about Firewall Technology</title>
+	<link rel ="stylesheet" href="styles/style.css" />
+	
+</head>
+
+
+
+<body>
+
+<nav>
+<a href= "index.html"> Index</a>
+<a href= "topic.html">Introduction</a>
+<a href= "quiz.html"> Quiz</a>
+<a href= "enhancements.html"> Enhancements </a>
+</nav>
+
+
+<header>
+<h1>  FIREWALL TECHNOLOGY</h1>
+</header>
+<hr />
+
+<p> Now, after learning about Firewall Technology, it's the time to do the quiz and check your understanding! </p>
+<p> Before doing that, please enter your name and student ID.</p>
+<form id="details" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+<fieldset>
+<legend><em>Student details</em></legend>
+<p><label for="studentid"> Student ID</label>
+<input type="text" name="studentid" id="studentid" required="required" pattern="[0-9]{7}|[0-9]{10}" /></p>
+<p><label for="given"> Given Name</label>
+<input type="text" name="given" id="given" maxlength="25" size="15" required="required" pattern="^[A-Za-z-]+$" />
+<label for="family"> Family Name</label>
+<input type="text" name="family" id="family" maxlength="25" size="15" required="required" pattern="^[A-Za-z-]+$"/></p>
+</fieldset>
+<fieldset>
+<legend><em>Questions</em></legend>
+<p>The first type of firewall was invented in what year? </p>
+<label><input type ="radio" name="unit" value="1986" checked="checked" required="required"  />1986</label>
+<label><input type ="radio" name="unit" value="1987" />1987</label>
+<label><input type ="radio" name="unit" value="1988" />1988</label>
+<label><input type ="radio" name="unit" value="1989" />1989</label>
+<p><label for="rank">What company developed United Threat Management(UTM)?</label>
+<select name="rank" id ="rank" >
+<option value="" selected="selected">Please Select</option>
+<option value="Cisco" >Cisco</option>
+<option value="DEO">Digital Equipment Organisation</option>
+<option value="AT&T">AT&T</option>
+<option value="IOC">International Data Corporation</option>
+</select>
+</p>
+
+<p><label>What types of firewall could be classified as traditional firewalls?<br />
+<textarea name="writtenanswer" rows="5" cols="50" required="required"> Enter your answer here...
+</textarea></label></p>
+<p> What characteristics could be considered as advantages of network-based application-layer firewalls?</p>
+<p><label><input type="checkbox" name="issue[]" value="inspection" />
+Better inspecting the contents of traffic and blocking specific contents</label></p>
+<p><label><input type="checkbox" name="issue[]" value="authentication"  />
+Could consolidate authentication, and offload encryption from outside servers</label></p>
+<p><label><input type="checkbox" name="issue[]" value="versatile" />
+Being more versatile and having dynamic roles</label></p>
+<p> <label for="ngfw">  Which types of packet filtering are similar in both traditional and Next-Generation Firewall?
+<input type="text" name="ngfw" id="ngfw" maxlength="40" size="20" required="required" /></label>
+</fieldset>
+
+<p>
+<input type="submit" value="Submit your response" />
+<input type="reset" value="Reset form" />
+</p>
+</form>
+<p> Thank you for your participation! Hopefully you could have more understanding about history and mechanism of firewall!</p>
+
+
+<footer>
+<p> COS10011 CWA</p>
+   <p> Mark up by: <a href="https://outlook.office365.com/mail/inbox">Cuong Nguyen.</a>All right reserved.</p>
+   <p>Assignment 1</p>
+ </footer>
+</body>
+</html>

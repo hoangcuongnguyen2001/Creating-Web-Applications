@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content=" " />
+	<meta name="author" content="A Lecturer"  />
+	<title>Quiz</title>
+	<link href="style.css" rel="stylesheet" />
+	<script src="myscript.js"></script>
+</head>
+<body id="quizPage" >
+<header>
+	<p><img src="logo.png" id="logo" alt="logo"></p>
+	<h1>Artificial Intelligence</h1>
+</header>
+<nav>
+	<ul>
+	  <li><a href="#">Home</a></li>
+	  <li><a href="quiz.html" class="active" >Quiz</a></li>
+	  <li><a href="result.html" >Result</a></li>
+	</ul>
+</nav>
+
+<h2>Quiz (10 marks each)</h2>
+<hr>
+<form id="quizForm" method="post" action="result.html">
+	<p>
+		<label for = "studID">Student ID: </label>
+		<input  name= "studID" id="studID"  >
+	</p>
+	
+	<p>
+		<label>Question 1: A formula given to a computer in order for it to complete a task is called a/an </label>
+		<input  name= "q1"  id="q1" />
+	</p>
+	
+	<p>
+		<label>Question 2: The conversion of speech into text is called:</label>
+		<select name="q2" id="q2">
+			<option value="textRead">Text reading</option>
+			<option value="textRecog">Text recognition</option>
+			<option value="speechRead">Speech reading</option>
+			<option value="speechRecog">Speech recognition</option>
+		</select>
+	</p>
+   
+	<p>
+		<input type= "submit" value="Apply"/>
+		<input type= "reset" value="Reset"/>
+	</p>
+	 
+</form>
+<p id="err"></p>
+</body>
+</html>

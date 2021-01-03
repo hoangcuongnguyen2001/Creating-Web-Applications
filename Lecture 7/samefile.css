@@ -1,0 +1,19 @@
+/* to provide some initial style */
+.current {
+	border-top:2px solid red; 
+	border-right:2px solid red;
+	border-left:2px solid red;
+	border-bottom: none;
+	}
+nav a{
+	display:inline-block; 
+	border-radius: 5px 5px 0 0;
+	border:2px solid grey;
+	padding:5px; 
+	text-decoration: none;
+	}
+	
+nav a:hover{
+	background-color:grey;
+	color:white;
+	}

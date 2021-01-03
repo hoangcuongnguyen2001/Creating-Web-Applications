@@ -1,0 +1,52 @@
+/*
+filename...
+author...
+created date ...
+last modified
+description...
+Target: stylish_cat.html
+*/
+
+/*typography*/
+
+body {font-family:calibri, sans-serif; color: blue;}
+
+h1 {color:darkblue;}
+nav li {list-style:none;}
+nav li  a{text-decoration:none;}
+nav li :hover{background-color:lightblue;}
+
+
+footer{font-variant: small-caps;
+	font-size:0.8em;}
+
+/*layout*/
+
+
+
+body{min-width:30em;
+max-width: 50em;}
+
+h1{text-align:center;}
+
+
+nav li {display: inline-block;
+	width:18%;
+	border:3px solid darkblue;
+	text-align:center;
+	border-radius:25px;}
+
+	
+#cat_description {width:50%;
+	float:left;}
+#cat_picture{
+	border:3px solid darkblue;
+	float:right;
+	padding:1em;
+	margin:1em;
+	background-color:lightblue;
+	}
+
+
+footer {text-align:center;
+	clear:both;}
