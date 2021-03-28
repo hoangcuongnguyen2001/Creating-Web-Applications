@@ -1,0 +1,153 @@
+/* This is the CSS file for the website of Cuong Nguyen, formed for helping organization and style of the website */
+
+
+nav {      /* Using for navigation bars */
+	text-align:center;
+	font-size:1.2em;
+	font-family:Verdana, serif;
+	
+}
+nav a:hover{background-color:lightblue; border-color:darkblue;}/* Using for navigation bars; when hovering the mouse,
+the color of the background and the border would change to lightblue and darkblue, respectively. */
+nav a{ /* Used for each part of navigation bar. */
+	text-decoration:none;
+    padding:0.2em 0.6em; 
+    border:4px solid #ccc;
+	background-color: lightgray;
+	}
+
+.contents{ /* Used for the menu */
+	float:right;
+	margin: 1em;
+	padding:0.5em;
+	border: 3px solid black;
+	width: 25%;
+	background-color: #ccc;
+	
+}
+
+.contents p {text-align:center;} /* For the title of table of contents */
+
+ol{ /* Used for every ordered list */
+	font-family: Calibri, sans-serif;
+	font-size:1em;
+}
+
+/* For modifying aside part */
+aside{
+	border: 4px solid purple;
+	border-radius: 14px;
+	margin: 1em;
+	padding: 1em;
+	width: 25%;
+	float:right;
+	text-align:left;
+}
+
+th{ /* Modifying each heading cell */
+	background-color: yellow;
+}
+
+td{ /* Modifying each data cell */
+	background-color: lightblue;
+}
+
+* { font-family: Arial, sans-serif;} /* For the font of all pages */
+
+h1{ /* For the first heading on header */
+	color: yellow;
+	border: 1px solid black;
+	font-variant: small-caps;
+	font-family: Calibri, sans-serif;
+	text-align: center;
+	background-image: url('images/Tech.jpg'); /* link:https://www.freepik.com/vectors/background */
+	font-size:4em;
+	text-shadow: 5px 3px 4px gray;
+
+}
+/* These CSS commands are for second and third heading levels */
+h2{
+	font-size:2em;
+}
+h3{
+	font-size: 1.6em;
+}
+table, th, td{border:1px solid black;} /* Used to make cells on table */
+
+
+/* These 2 parts below are used for animations for unordered lists */
+/* Link: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+ul li{
+	animation-duration: 3s;
+    animation-name: slidein;
+}
+
+#network, #application, #next{text-decoration: underline;} /* Used for underlining headings for network, application-layer firewalls and NGFW. */
+
+
+.index{
+	background-image: url('images/background.jpg');} /* For the background graphic of the index page. */
+
+p, ul{ /* Used for each paragraph and unordered list */
+	font-size:1em;
+}
+
+figure figcaption {  /* Used to modify the caption of the figure */
+	font-size:1em;
+}
+figure{
+	text-align:center;
+}
+
+.tabletitle{
+	color:darkred; font-weight: bold; font-family: Verdana, sans-serif; font-size: 1.35em;
+} /* For the title of the table */
+
+blockquote, q{ /* Used for the citation */
+	font-style:italic;
+	font-size:1em;
+}
+
+article{ min-width: 25em;}
+
+footer{  /* Used for making the footer */
+	clear:both;
+	border-top: 4px inset darkblue;
+	border-top-style: double;
+}
+
+/* These 2 parts below are used for footer in the index part*/
+.newfooter{ 
+   text-align:center;
+}
+
+.newfooter p{
+	text-align: center;
+}
+
+/* For the footer of the webpage */
+
+footer p{
+	text-align:center;
+	font-size:0.9em;
+	font-family:Verdana, sans-serif;
+	display: inline-block; width: 33%;
+}
+
+/* For three parts of the footer */
+footer p:first-child {text-align:left;}
+footer p:nth-child(2){text-align:center;}
+footer p:last-child { text-align:right;}
+

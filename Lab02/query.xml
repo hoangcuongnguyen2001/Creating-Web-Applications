@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<james_book>
+<book>
+<name>Fifty shades of grey</name>
+<author> E.L.James</author>
+<time>May 2016</time>
+<feeling>Did not like very much</feeling>
+<aim></aim>
+</book>
+<book>
+<name>The grass is singing</name>
+<author> Doris Lessing</author>
+<time>June 2016</time>
+<feeling>Enjoying quite a bit</feeling>
+<aim></aim>
+</book>
+<book>
+<name>A short history of nearly everything</name>
+<author>Bill Bryson</author>
+<time>July 2016</time>
+<feeling>Very informative</feeling>
+<aim></aim>
+</book>
+<book>
+<name>JSON in 24 hours</name>
+<author>Peter Settler </author>
+<time>After July 2016</time>
+<feeling></feeling>
+<aim>For work</aim>
+</book>
+<book>
+<name>Miss Smilia's feeling for snow</name>
+<author> Peter Hoeg</author>
+<time>After reading JSON in 24 hours</time>
+<feeling></feeling>
+<aim>For entertainment</aim>
+</book>
+</james_book>
